@@ -1,0 +1,21 @@
+/* let numero = prompt("Digite um número");
+document.body.innerHTML = `<h1>O número digitado foi: ${numero}</h1>`;
+document.body.innerHTML += `Raiz quadrada: ${Math.sqrt(numero)}`;
+document.body.innerHTML += `${numero} é inteiro: ${Number.isInteger(numero)}`;
+document.body.innerHTML += `${numero} é NaN: ${isNaN(numero)}`;
+document.body.innerHTML += `Arrendondado pra baixo: ${Math.floor(numero)}`;
+document.body.innerHTML += `Arrendondado pra cima: ${Math.ceil(numero)}`;
+document.body.innerHTML += `Com duas casas decimais: ${parseFloat(numero).toFixed(2)}`;
+*/
+// let numero = prompt("Digite um número");
+// numero = Number(numero);
+const numero = Number(prompt("Digite um número"));
+const numeroTitulo = document.getElementById("numero-titulo");
+const texto = document.getElementById("texto");
+numeroTitulo.innerHTML = numero;
+texto.innerHTML = `<p>Raiz quadrada: ${Math.sqrt(numero)}</p>`
+texto.innerHTML += `<p>${numero} é inteiro: ${Number.isInteger(numero)}</p>`
+texto.innerHTML += `<p>${numero} é NaN: ${isNaN(numero)}</p>`;
+texto.innerHTML += `<p>Arrendondado pra baixo: ${Math.floor(numero)}</p>`;
+texto.innerHTML += `<p>Arrendondado pra cima: ${Math.ceil(numero)}</p>`;
+texto.innerHTML += `<p>Com duas casas decimais: ${parseFloat(numero).toFixed(2)}</p>`;

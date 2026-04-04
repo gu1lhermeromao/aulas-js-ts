@@ -1,0 +1,13 @@
+console.log('Olá, mundo!');
+alert('Olá, mundo!');
+let = nome = prompt('Qual é o seu nome?');
+alert('Olá, ' + nome + '!');
+let num1 = prompt('Digite um número:');
+let num2 = prompt('Digite outro número:');
+num1 = Number(num1);
+console.log(num1);
+num2 = Number(num2);
+console.log(num2);
+let resultado = num1 + num2;
+alert(nome + ', A soma dos números é: ' + resultado);
+alert(`${nome}, A soma dos números é: ${num1 + num2}`);
