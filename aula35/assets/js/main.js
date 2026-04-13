@@ -5,7 +5,25 @@ const elementos = [
     { tag: 'section', texto: 'Frase 4' }
 ]
 
-function criarDiv() {
+const container = document.querySelector('.container');
+
+const div = document.createElement('div');
+
+for (let i = 0; i < elementos.length; i++) {
+    /*console.log(elementos[i].tag);
+    console.log(elementos[i].texto);*/
+    let { tag, texto } = elementos[i]; // desestruturação
+    let tagCriada = document.createElement(tag);
+    let textoCriado = document.createTextNode(texto);
+    // tagCriada.innerText = texto;
+    tagCriada.appendChild(textoCriado);
+    div.appendChild(tagCriada);
+}
+
+container.appendChild(div);
+console.log(elementos);
+
+/*function criarDiv() {
     let div = document.createElement('div');
     let container = document.querySelector('.container');
     container.appendChild(div);
@@ -24,4 +42,4 @@ for (let i = 0; i < elementos.length; i++) {
     let tag = elementos[i].tag;
     let texto = elementos[i].texto;
     criarElemento(tag, texto);
-}
+}*/
